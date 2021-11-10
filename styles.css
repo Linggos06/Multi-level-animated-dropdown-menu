@@ -1,3 +1,9 @@
+@font-face {
+    font-family: "Golos Text";
+    src: url("Golos-Text_Regular.woff") format("woff");
+    font-weight: 500;
+   }
+
 * {
   padding: 0;
   margin: 0;
@@ -14,9 +20,12 @@ html,
 body {
   height: 100%;
   width: 100%;
+  font-family: "Golos Text", "Arial", sans-serif;
   font-size: 100%;
   line-height: 1;
   font-size: 14px;
+  background-color: #ffffff;
+  color: #151617;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -26,6 +35,7 @@ button {
 }
 a,
 a:visited {
+  color: #151617;
   text-decoration: none;
 }
 a:hover {
@@ -33,4 +43,146 @@ a:hover {
 }
 ul li {
   list-style: none;
+  cursor: pointer;
+}
+.header {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+}
+.burger {
+  position: relative;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+.burger span {
+  display: block;
+  position: absolute;
+  top: calc(50% - 1px);
+  left: 0;
+  width: 100%;
+  height: 2px;
+  border-radius: 10px;
+  background-color: #141414;
+}
+.burger span:first-child {
+  top: 0;
+}
+.burger span:last-child {
+  top: auto;
+  bottom: 0;
+}
+.navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    max-width: 360px;
+    width: 100%;
+    min-width: 320px;
+    height: 100%;
+    font-size: 22px;
+    line-height: 32px;
+    padding: 10px 30px 62px 30px;
+    background-color: #ffffff;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-120%);
+    transition: all 0.5s ease-out;
+}
+.navigation.open_menu {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+.nav__header {
+    display: flex;
+    justify-content: space-between;
+    flex: 0 0 32px;
+    
+}
+.navigation__header-switch_languages {
+   flex: 0 0 80px;
+}
+.navigation__header-switch_languages span {
+    display: inline-block;
+ }
+.flag {
+    position: relative;
+    top: 4px;
+    width: 24px;
+    height: 24px;
+    background: url("/icons/Icon_RU.png") center no-repeat;
+    
+
+}
+.expand_menu {
+    width: 16px;
+    height: 16px;
+    background: url("/icons/icon_16x16_M_Arrow-bottom.png") center no-repeat;
+}
+.nav__header_close_menu {
+    width: 30px;
+    height: 30px;
+    background: url("/icons/Close_Button.png") center no-repeat;
+    cursor: pointer;
+}
+.nav__body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 0 0 80%;
+    
+}
+.nav__menu li:not(:last-child) {
+    margin-bottom: 20px;
+}
+.nav__item {
+}
+.nav__item-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.expand_submenu_btn {
+    width: 16px;
+    height: 16px;
+    background: url("/icons/icon_16x16_M_Arrow-right.png") center no-repeat;
+}
+.nav__footer {
+}
+.nav__item_submenu-services {
+position: absolute;
+transform: translateX(180%);
+top: 0;
+left: 0;
+bottom: 0;
+right: 0;
+z-index: 10;
+transition: all 0.8s ease-in-out;
+background-color: white;
+}
+.nav__item_submenu-services.active{
+    transform: translateX(0);
+}
+.submenu_header {
+    display: flex; 
+}
+.btn_back {
+    background: url("/icons/icon_16x16_M_Arrow-left.png") center no-repeat;  
+}
+.nav__footer {
+    flex: 0 0 84px;
+}
+.nav__footer ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
 }
