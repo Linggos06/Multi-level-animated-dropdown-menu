@@ -139,12 +139,14 @@ ul li {
 .nav__menu li:not(:last-child) {
   margin-bottom: 20px;
 }
-.nav__item {
-}
 .nav__item-link {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  pointer-events: none;
+}
+ul:hover{
+  color: red;
 }
 .expand_submenu_btn {
   width: 16px;
@@ -193,4 +195,27 @@ ul li {
   line-height: 32px;
   font-weight: 500;
   margin-bottom: 31px;
+}
+.submenu_header button,
+.submenu_header p {
+  pointer-events: none;
+}
+.submenu_links_with_details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+}
+.submenu_links_with_details a {
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 5px;  
+}
+.submenu_links_with_details p {
+  font-size: 12px;
+  line-height: 20px;
+  color:#577188;
+}
+.detailed_menu {
+  height: 400px;
+  overflow-y: scroll;
 }
