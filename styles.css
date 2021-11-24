@@ -145,9 +145,6 @@ ul li {
   align-items: center;
   pointer-events: none;
 }
-ul:hover{
-  color: red;
-}
 .expand_submenu_btn {
   width: 16px;
   height: 16px;
@@ -163,12 +160,18 @@ ul:hover{
   left: 0;
   bottom: 0;
   right: 0;
-  z-index: 10;
+  z-index: 20;
   transition: all 0.8s ease-in-out;
   background-color: white;
 }
 .submenu.active {
   transform: translateX(0);
+}
+ul li:hover > p,
+ul li:hover > a,
+ul > li:hover .animated,
+.submenu > ul li:hover > .nav__item-link > p {
+  color: #ff0000;
 }
 .submenu_header {
   display: flex;
@@ -203,17 +206,17 @@ ul:hover{
 .submenu_links_with_details {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; 
+  align-items: flex-start;
 }
 .submenu_links_with_details a {
   font-size: 16px;
   line-height: 24px;
-  margin-bottom: 5px;  
+  margin-bottom: 5px;
 }
 .submenu_links_with_details p {
   font-size: 12px;
   line-height: 20px;
-  color:#577188;
+  color: #577188;
 }
 .detailed_menu {
   height: 400px;
