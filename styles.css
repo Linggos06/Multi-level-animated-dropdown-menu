@@ -119,7 +119,7 @@ ul li {
   top: 4px;
   width: 24px;
   height: 24px;
-  background: url("/icons/Icon_Ru.png") center/cover no-repeat;
+  background: url("icons/Icon_Ru.png") center/cover no-repeat;
 }
 .expand_lang-menu {
   width: 16px;
@@ -173,27 +173,27 @@ ul li {
   margin-right: 10px;
 }
 .Us .flag {
-  background: url("/icons/Icon_Us.png") center no-repeat;
+  background: url("icons/Icon_Us.png") center no-repeat;
 }
 .Nl .flag {
-  background: url("/icons/Icon_Nl.png") center no-repeat;
+  background: url("icons/Icon_Nl.png") center no-repeat;
 }
 .By .flag {
-  background: url("/icons/Icon_By.png") center no-repeat;
+  background: url("icons/Icon_By.png") center no-repeat;
 }
 .Ru .flag {
-  background: url("/icons/Icon_Ru.png") center/cover no-repeat;
+  background: url("icons/Icon_Ru.png") center/cover no-repeat;
 }
 .Kz .flag {
-  background: url("/icons/Icon_Kz.png") center no-repeat;
+  background: url("icons/Icon_Kz.png") center no-repeat;
 }
 .Tr .flag {
-  background: url("/icons/Icon_Tr.png") center no-repeat;
+  background: url("icons/Icon_Tr.png") center no-repeat;
 }
 .tick {
   width: 16px;
   height: 16px;
-  background: url("/icons/icon_16x16_M_Tick.png") center no-repeat;
+  background: url("icons/icon_16x16_M_Tick.png") center no-repeat;
   pointer-events: none;
   opacity: 0;
 }
