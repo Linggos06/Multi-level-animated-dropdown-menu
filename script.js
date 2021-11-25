@@ -22,7 +22,7 @@ switch_lang_div.addEventListener("click", (ev)=>{
 
 lang_menu_list.addEventListener("click", (ev) => {
   const country = ev.target.dataset.lan;
-  flag.style.backgroundImage = `url(/icons/Icon_${country}.png)`;
+  flag.style.backgroundImage = `url(icons/Icon_${country}.png)`;
   lang.textContent = country;
   ticks.forEach((tick) => {
     if(tick.closest(`.${country}`) === ev.target){
