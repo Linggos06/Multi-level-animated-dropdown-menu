@@ -116,17 +116,17 @@ ul li {
   top: 4px;
   width: 24px;
   height: 24px;
-  background: url("/icons/Icon_RU.png") center no-repeat;
+  background: url("icons/Icon_RU.png") center no-repeat;
 }
 .expand_menu {
   width: 16px;
   height: 16px;
-  background: url("/icons/icon_16x16_M_Arrow-bottom.png") center no-repeat;
+  background: url("icons/icon_16x16_M_Arrow-bottom.png") center no-repeat;
 }
 .nav__header_close_menu {
   width: 30px;
   height: 30px;
-  background: url("/icons/Close_Button.png") center no-repeat;
+  background: url("icons/Close_Button.png") center no-repeat;
   cursor: pointer;
 }
 .nav__body {
@@ -148,7 +148,7 @@ ul li {
 .expand_submenu_btn {
   width: 16px;
   height: 16px;
-  background: url("/icons/icon_16x16_M_Arrow-right.png") center no-repeat;
+  background: url("icons/icon_16x16_M_Arrow-right.png") center no-repeat;
 }
 .submenu {
   font-size: 18px;
@@ -177,7 +177,7 @@ ul > li:hover .animated,
   display: flex;
 }
 .btn_back {
-  background: url("/icons/icon_16x16_M_Arrow-left.png") center no-repeat;
+  background: url("icons/icon_16x16_M_Arrow-left.png") center no-repeat;
   margin-right: 5px;
 }
 .nav__footer {
