@@ -8,6 +8,9 @@
   padding: 0;
   margin: 0;
   border: 0;
+  /* Works on Firefox */
+  scrollbar-width: 2px;
+  scrollbar-color: #C6D6E5;
 }
 *,
 *:before,
@@ -15,6 +18,13 @@
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+}
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 2px;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: #C6D6E5;
 }
 html,
 body {
@@ -87,7 +97,7 @@ ul li {
   font-size: 22px;
   line-height: 32px;
   font-weight: 500;
-  padding: 10px 30px 62px 30px;
+  padding-bottom: 62px;
   background-color: #ffffff;
   box-shadow: 0px 6px 10px rgba(116, 137, 155, 0.06), 0px 1px 18px rgba(116, 137, 155, 0.04), 0px 3px 5px rgba(116, 137, 155, 0.08);
   overflow: hidden;
@@ -105,6 +115,7 @@ ul li {
   display: flex;
   justify-content: space-between;
   flex: 0 0 32px;
+  padding: 10px 10px 0 10px;
 }
 .navigation__header-switch_languages {
   position: relative;
@@ -125,6 +136,7 @@ ul li {
   width: 16px;
   height: 16px;
   background: url("icons/icon_16x16_M_Arrow-bottom.png") center no-repeat;
+  transition: all 0.3s ease-in;
 }
 .expand_lang-menu.active{
   transform: rotate(180deg);
@@ -139,7 +151,7 @@ ul li {
   line-height: 24px;
   z-index: 30;
   padding: 12px 0;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.7s ease;
   background-color: #ffffff;
   box-shadow: 0px 6px 10px rgba(116, 137, 155, 0.06), 0px 1px 18px rgba(116, 137, 155, 0.04), 0px 3px 5px rgba(116, 137, 155, 0.08);
   border-radius: 2px;
@@ -211,7 +223,7 @@ ul li {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  flex: 0 0 80%;
+  flex: 0 0 82%;
 }
 .nav__menu li:not(:last-child) {
   margin-bottom: 20px;
@@ -222,10 +234,17 @@ ul li {
   align-items: center;
   pointer-events: none;
 }
+.nav__item-link p {
+  flex: 0 0 90%;
+}
 .expand_submenu_btn {
   width: 16px;
   height: 16px;
   background: url("icons/icon_16x16_M_Arrow-right.png") center no-repeat;
+}
+.main_menu {
+  padding-left: 20px;
+  padding-right: 30px;
 }
 .submenu {
   font-size: 18px;
@@ -241,8 +260,10 @@ ul li {
   transition: all 0.8s ease-in-out;
   background-color: white;
 }
-.submenu li {
-  padding-left: 5px;
+.submenu ul {
+  margin-top: 20px;
+  padding-left: 20px;
+  padding-right: 30px;
 }
 .submenu.active {
   transform: translateX(0);
@@ -252,9 +273,6 @@ ul li:hover > a,
 ul > li:hover .animated,
 .submenu > ul li:hover > .nav__item-link > p {
   color: #ff0000;
-}
-.submenu_header {
-  display: flex;
 }
 .btn_back {
   background: url("icons/icon_16x16_M_Arrow-left.png") center no-repeat;
@@ -268,16 +286,17 @@ ul > li:hover .animated,
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+  padding-left: 20px;
+  padding-right: 30px;
 }
 .submenu_header {
-  position: relative;
-  left: -15px;
   display: flex;
   align-items: center;
   font-size: 22px;
   line-height: 32px;
   font-weight: 500;
-  margin-bottom: 31px;
+  padding-bottom: 20px;
+  padding-left: 5px;
 }
 .submenu_header button,
 .submenu_header p {
@@ -295,11 +314,16 @@ ul > li:hover .animated,
   margin-bottom: 5px;
 }
 .submenu_links_with_details p {
+  width: 90%;
   font-size: 12px;
   line-height: 20px;
   color: #577188;
 }
 .detailed_menu {
   height: 400px;
+  margin-right: 5px;
   overflow-y: scroll;
+}
+.return-link {
+  border-bottom: 1px solid #C6D6E5;
 }
