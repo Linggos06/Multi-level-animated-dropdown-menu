@@ -322,6 +322,7 @@ ul > li:hover .animated,
 .detailed_menu {
   height: 400px;
   margin-right: 5px;
+  padding-bottom: 10px;
   overflow-y: scroll;
 }
 .return-link {
